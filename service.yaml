@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: vertx-auction
+  namespace: default
+spec:
+  ports:
+    - name: tcp-client
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: vertx-auction
